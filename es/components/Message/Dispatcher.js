@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import message from './index';
 export default (function (_ref) {
   var item = _ref.item;

@@ -14,15 +14,26 @@ import { default as Subscribe } from './Subscribe';
 
 import { default as Template } from './Template';
 
-import { default as Dispatcher, IMessageItemDispatcherInfo } from './Dispatcher';
+import {
+  default as Dispatcher,
+  IMessageItemDispatcherInfo,
+} from './Dispatcher';
 import { Wechat } from 'wechat-mp-specs/typings/message';
-import { CSSProperties, PropsWithChildren } from 'react';
+import React, { CSSProperties, PropsWithChildren } from 'react';
 
 export default {
   Pic: Pic as ({ imageUrl }: { imageUrl: string }) => JSX.Element,
-  Mini: Mini as ({ info }: { info: Wechat.Message.IMessageMiniItem['data'] }) => JSX.Element,
+  Mini: Mini as ({
+    info,
+  }: {
+    info: Wechat.Message.IMessageMiniItem['data'];
+  }) => JSX.Element,
   Text: Text as ({ content }: { content: string | JSX.Element }) => JSX.Element,
-  News: News as ({ info }: { info: Wechat.Message.IMessageNewsItem['data']['articles'][0] }) => JSX.Element,
+  News: News as ({
+    info,
+  }: {
+    info: Wechat.Message.IMessageNewsItem['data']['articles'][0];
+  }) => JSX.Element,
   Subscribe: Subscribe as ({
     info,
     className,
@@ -70,5 +81,9 @@ export default {
     msgType: Wechat.Message.IMessageItem['msgType'];
     customContent?: boolean;
   }>) => JSX.Element,
-  Dispatcher: Dispatcher as ({ item }: { item: IMessageItemDispatcherInfo & {} }) => JSX.Element,
+  Dispatcher: Dispatcher as ({
+    item,
+  }: {
+    item: IMessageItemDispatcherInfo & {};
+  }) => JSX.Element,
 };

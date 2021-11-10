@@ -1,3 +1,4 @@
+import React from 'react';
 import './footer.scss';
 export default (function (props) {
   return /*#__PURE__*/React.createElement("footer", {

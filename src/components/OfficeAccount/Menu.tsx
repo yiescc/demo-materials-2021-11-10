@@ -1,6 +1,6 @@
 // import { IMenuItem } from '../../typings/menu';
 
-import { createElement, FC, useContext } from 'react';
+import React, { createElement, FC, useContext } from 'react';
 
 import './menu.scss';
 import { storeDispatcherCtx, storeStateCtx } from './store';
@@ -68,7 +68,10 @@ const BtnAddSecondaryMenu: FC<{
   );
 };
 
-const SecondaryMenu: FC<{ list: IMenuItem[]; parentIdx: number }> = ({ list, parentIdx }) => {
+const SecondaryMenu: FC<{ list: IMenuItem[]; parentIdx: number }> = ({
+  list,
+  parentIdx,
+}) => {
   const { chooseSecondaryMenu } = useContext(storeDispatcherCtx);
   const { currentSecondaryMenuIdx } = useContext(storeStateCtx);
 
@@ -78,14 +81,18 @@ const SecondaryMenu: FC<{ list: IMenuItem[]; parentIdx: number }> = ({ list, par
         return (
           <li
             className={`wechat-office-account-secondary-menu-item ${
-              currentSecondaryMenuIdx === itemIdx ? 'wechat-office-account-secondary-menu-item-current' : ''
+              currentSecondaryMenuIdx === itemIdx
+                ? 'wechat-office-account-secondary-menu-item-current'
+                : ''
             } clear_li_style`}
             key={item.name}
             onClick={() => {
               chooseSecondaryMenu?.(itemIdx);
             }}
           >
-            <span className="wechat-office-account-secondary-menu-item-text">{item.name}</span>
+            <span className="wechat-office-account-secondary-menu-item-text">
+              {item.name}
+            </span>
             <span className="wechat-office-account-secondary-menu-item-split" />
           </li>
         );
@@ -105,9 +112,13 @@ const MenuItem: FC<{
   return (
     <li
       className={`wechat-office-account-menu-item ${
-        currentMenuIdx === itemIdx ? 'wechat-office-account-menu-item-current' : ''
+        currentMenuIdx === itemIdx
+          ? 'wechat-office-account-menu-item-current'
+          : ''
       } ${
-        currentMenuIdx === itemIdx && currentSecondaryMenuIdx !== undefined && currentSecondaryMenuIdx > -1
+        currentMenuIdx === itemIdx &&
+        currentSecondaryMenuIdx !== undefined &&
+        currentSecondaryMenuIdx > -1
           ? 'wechat-office-account-menu-item-has-child-current'
           : ''
       } clear_li_style`}
@@ -120,11 +131,17 @@ const MenuItem: FC<{
           chooseMenu?.(itemIdx);
         }}
       >
-        {item.sub_button?.length ? <span className="wechat-office-account-menu-item-icon-more" /> : null}
+        {item.sub_button?.length ? (
+          <span className="wechat-office-account-menu-item-icon-more" />
+        ) : null}
 
-        <span className="wechat-office-account-menu-item-text">{item.name}</span>
+        <span className="wechat-office-account-menu-item-text">
+          {item.name}
+        </span>
       </p>
-      {currentMenuIdx === itemIdx && <SecondaryMenu list={item.sub_button ?? []} parentIdx={itemIdx} />}
+      {currentMenuIdx === itemIdx && (
+        <SecondaryMenu list={item.sub_button ?? []} parentIdx={itemIdx} />
+      )}
     </li>
   );
 };
@@ -132,9 +149,18 @@ const MenuItem: FC<{
 const BtnAddMenu: FC<{
   onClick: () => void;
 }> = ({ onClick }) => (
-  <li className="wechat-office-account-menu-item clear_li_style" onClick={onClick}>
+  <li
+    className="wechat-office-account-menu-item clear_li_style"
+    onClick={onClick}
+  >
     <span className="wechat-office-account-menu-item-split" />
-    <Icon type="plus" className="wechat-office-account-menu-btn-add-icon" unit="px" color="#000" size={16} />
+    <Icon
+      type="plus"
+      className="wechat-office-account-menu-btn-add-icon"
+      unit="px"
+      color="#000"
+      size={16}
+    />
   </li>
 );
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import ObjToClassName from '../../libs/ObjToClassName';
 import style from './Common.module.scss';
 

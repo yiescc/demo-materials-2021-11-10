@@ -1,5 +1,5 @@
 // import { IMenuItem } from '../../typings/menu';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import './menu.scss';
 import { storeDispatcherCtx, storeStateCtx } from './store';
 import Icon from '../Icon';

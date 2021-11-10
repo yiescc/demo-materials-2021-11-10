@@ -1,7 +1,7 @@
 // @ts-ignore 仅作外部
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 // import {createElement} from 'react';
-import { createElement, useMemo } from 'react';
+import React, { createElement, useMemo } from 'react';
 
 import { IMenuButtonItem, IMenuParentButtonItem } from '../../typings/menu';
 import Icon from '../Icon';
@@ -12,7 +12,12 @@ type IMenuItem = IMenuButtonItem;
 
 const BtnKeyboard = () => (
   <div className={`${styles.KeyboardIcon}`}>
-    <Icon type="switch-keyboard" size={25} unit="px" style={{ color: '#000' }} />
+    <Icon
+      type="switch-keyboard"
+      size={25}
+      unit="px"
+      style={{ color: '#000' }}
+    />
   </div>
 );
 
@@ -80,7 +85,10 @@ const SecondaryMenu = ({
         return (
           <li
             className={`${styles.SecondaryItem} ${
-              currentSecondaryMenuIdx === itemIdx && parentIdx === currentMenuIdx ? styles.SecondaryItemCurrent : ''
+              currentSecondaryMenuIdx === itemIdx &&
+              parentIdx === currentMenuIdx
+                ? styles.SecondaryItemCurrent
+                : ''
             } clear_li_style`}
             // eslint-disable-next-line react/no-array-index-key
             key={itemIdx}
@@ -88,13 +96,20 @@ const SecondaryMenu = ({
               chooseSecondaryMenu?.(parentIdx, itemIdx);
             }}
           >
-            <span className={styles.SecondaryItemText}>{menuNameList[itemIdx]}</span>
+            <span className={styles.SecondaryItemText}>
+              {menuNameList[itemIdx]}
+            </span>
             <span className={styles.SecondaryItemSplit} />
           </li>
         );
       })}
 
-      {list.length < 5 && <BtnAddSecondaryMenu parentIdx={parentIdx} addSecondaryMenu={addSecondaryMenu} />}
+      {list.length < 5 && (
+        <BtnAddSecondaryMenu
+          parentIdx={parentIdx}
+          addSecondaryMenu={addSecondaryMenu}
+        />
+      )}
     </ol>
   );
 };
@@ -119,7 +134,8 @@ const MenuItem = ({
   addSecondaryMenu?: (parentIdx: number) => void;
 }) => {
   // @ts-ignore 忽略subButton类型，有可能后端会传null
-  const hasSubButton = Object.hasOwnProperty.call(item, 'subButton') && item.subButton;
+  const hasSubButton =
+    Object.hasOwnProperty.call(item, 'subButton') && item.subButton;
   const menuName = useMemo(() => {
     if (item.name.length > 7) {
       const before = item.name.slice(0, 4);
@@ -132,8 +148,14 @@ const MenuItem = ({
 
   return (
     <li
-      className={`${styles.Item} ${currentMenuIdx === itemIdx ? styles.ItemCurrent : ''} ${
-        currentMenuIdx === itemIdx && hasSubButton && currentSecondaryMenuIdx > -1 ? styles.ItemCurrentFold : ''
+      className={`${styles.Item} ${
+        currentMenuIdx === itemIdx ? styles.ItemCurrent : ''
+      } ${
+        currentMenuIdx === itemIdx &&
+        hasSubButton &&
+        currentSecondaryMenuIdx > -1
+          ? styles.ItemCurrentFold
+          : ''
       }`}
       // eslint-disable-next-line react/no-array-index-key
       key={itemIdx}
@@ -145,7 +167,8 @@ const MenuItem = ({
           chooseMenu?.(itemIdx);
         }}
       >
-        {hasSubButton && (item as IMenuParentButtonItem).subButton.length > 0 ? (
+        {hasSubButton &&
+        (item as IMenuParentButtonItem).subButton.length > 0 ? (
           <span className={styles.ItemIconMore} />
         ) : null}
 
@@ -170,7 +193,12 @@ const MenuItem = ({
 const BtnAddMenu = ({ onClick }: { onClick?: () => void }) => (
   <li className={styles.Item} onClick={onClick}>
     <span className={styles.ItemSplit} />
-    <Icon type="plus" className={styles.MenuAddIcon} size={16} style={{ color: '#000' }} />
+    <Icon
+      type="plus"
+      className={styles.MenuAddIcon}
+      size={16}
+      style={{ color: '#000' }}
+    />
   </li>
 );
 

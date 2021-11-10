@@ -1,3 +1,4 @@
+import React from 'react';
 import style from './Pic.module.scss';
 export default (function (_ref) {
   var imageUrl = _ref.imageUrl;

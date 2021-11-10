@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import Icon from '../Icon';
 import './navigationBar.scss';
 import { storeStateCtx } from './store';

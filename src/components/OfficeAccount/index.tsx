@@ -1,11 +1,17 @@
-import { createElement, PropsWithChildren, useMemo } from 'react';
+import React, { createElement, PropsWithChildren, useMemo } from 'react';
 
 import StatusBar from './StatusBar';
 import NavigatorBar from './NavigatorBar';
 import Footer from './Footer';
 import Menu from './Menu';
 
-import { IStoreDispatcher, IStoreState, storeDispatcherCtx, storeStateCtx, storeStateDefault } from './store';
+import {
+  IStoreDispatcher,
+  IStoreState,
+  storeDispatcherCtx,
+  storeStateCtx,
+  storeStateDefault,
+} from './store';
 
 import './index.scss';
 
@@ -13,9 +19,12 @@ export default function OfficeAccountUI(
   props: PropsWithChildren<{
     state?: IStoreState;
     menuDispatcher?: IStoreDispatcher;
-  }>,
+  }>
 ) {
-  const storeState = useMemo(() => props.state ?? storeStateDefault, [props.state]);
+  const storeState = useMemo(
+    () => props.state ?? storeStateDefault,
+    [props.state]
+  );
   const storeDispatch = useMemo<IStoreDispatcher>(() => {
     return {
       ...props.menuDispatcher,

@@ -1,3 +1,4 @@
+import React from 'react';
 import './statusBar.scss';
 export default (function () {
   return /*#__PURE__*/React.createElement("div", {

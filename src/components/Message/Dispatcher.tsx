@@ -1,4 +1,4 @@
-import { createElement, useMemo } from 'react';
+import React, { createElement, useMemo } from 'react';
 import { Wechat } from 'wechat-mp-specs/typings/message';
 
 import message from './index';
@@ -51,7 +51,11 @@ export default ({ item }: { item: IMessageItemDispatcherInfo }) => {
       avatar={item.avatar}
       isMine={item.isMine}
       msgType={item.msgType}
-      customContent={item.msgType === 'mpNews' || item.msgType === 'subscribe' || item.msgType === 'template'}
+      customContent={
+        item.msgType === 'mpNews' ||
+        item.msgType === 'subscribe' ||
+        item.msgType === 'template'
+      }
     >
       {Component}
     </message.Wrapper>

@@ -1,7 +1,7 @@
 // @ts-ignore 仅作外部
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 // import {createElement} from 'react';
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import Icon from '../Icon';
 import styles from './Menu.module.scss';
 

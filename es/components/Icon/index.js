@@ -1,5 +1,5 @@
 import _extends from "@babel/runtime/helpers/extends";
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import './index.scss';
 var minFontSize = 24; // const pxToRem = (px: number) => {
 //   return Number((px / 75).toFixed(4));

@@ -1,4 +1,4 @@
-import { createElement, PropsWithChildren } from 'react';
+import React, { createElement, PropsWithChildren } from 'react';
 import { Wechat } from 'wechat-mp-specs/typings/message';
 import ObjToClassName from '../../libs/ObjToClassName';
 
@@ -8,7 +8,10 @@ const Content = ({
   isMine,
   msgType,
   children,
-}: PropsWithChildren<{ isMine: boolean; msgType: Wechat.Message.IMessageItem['msgType'] }>) => {
+}: PropsWithChildren<{
+  isMine: boolean;
+  msgType: Wechat.Message.IMessageItem['msgType'];
+}>) => {
   return (
     <div
       className={ObjToClassName({
@@ -50,8 +53,14 @@ export default ({
         width: typeof width === 'number' ? `${width}px` : width,
       }}
     >
-      <div className={style.left} style={{ display: customContent ? 'none' : 'block' }}>
-        <i className={style.avatar} style={{ backgroundImage: `url(${avatar})` }} />
+      <div
+        className={style.left}
+        style={{ display: customContent ? 'none' : 'block' }}
+      >
+        <i
+          className={style.avatar}
+          style={{ backgroundImage: `url(${avatar})` }}
+        />
       </div>
       <div className={style.right}>
         {customContent ? (

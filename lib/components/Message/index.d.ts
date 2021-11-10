@@ -5,13 +5,13 @@ declare const _default: {
     Pic: ({ imageUrl }: {
         imageUrl: string;
     }) => JSX.Element;
-    Mini: ({ info }: {
+    Mini: ({ info, }: {
         info: Wechat.Message.IMessageMiniItem['data'];
     }) => JSX.Element;
     Text: ({ content }: {
         content: string | JSX.Element;
     }) => JSX.Element;
-    News: ({ info }: {
+    News: ({ info, }: {
         info: Wechat.Message.IMessageNewsItem['data']['articles'][0];
     }) => JSX.Element;
     Subscribe: ({ info, className, style, type, officialAvatar, officialNickname, }: {
@@ -39,7 +39,7 @@ declare const _default: {
         msgType: Wechat.Message.IMessageItem['msgType'];
         customContent?: boolean;
     }>) => JSX.Element;
-    Dispatcher: ({ item }: {
+    Dispatcher: ({ item, }: {
         item: IMessageItemDispatcherInfo & {};
     }) => JSX.Element;
 };

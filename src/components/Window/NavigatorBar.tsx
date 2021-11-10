@@ -1,5 +1,5 @@
 import Icon from '../Icon';
-import { createElement } from 'react';
+import React, { createElement } from 'react';
 
 import style from './NavigationBar.module.scss';
 

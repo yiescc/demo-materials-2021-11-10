@@ -1,5 +1,5 @@
 import _extends from "@babel/runtime/helpers/extends";
-import { useMemo } from 'react'; // Comps
+import React, { useMemo } from 'react'; // Comps
 
 import StatusBar from './StatusBar';
 import NavigatorBar from './NavigatorBar';

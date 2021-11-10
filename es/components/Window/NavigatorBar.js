@@ -1,4 +1,5 @@
 import Icon from '../Icon';
+import React from 'react';
 import style from './NavigationBar.module.scss';
 export default (function (_ref) {
   var _ref$title = _ref.title,

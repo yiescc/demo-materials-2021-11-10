@@ -1,4 +1,4 @@
-import { createElement, useContext } from 'react';
+import React, { createElement, useContext } from 'react';
 import Icon from '../Icon';
 
 import './navigationBar.scss';
@@ -17,13 +17,23 @@ export default () => {
       className="wechat-office-account-navigation-bar"
     >
       <div className="wechat-office-account-navigation-bar-left">
-        <Icon type="back" size={18} className="wechat-office-account-navigation-bar-icon-back" unit="px" />
+        <Icon
+          type="back"
+          size={18}
+          className="wechat-office-account-navigation-bar-icon-back"
+          unit="px"
+        />
       </div>
       <div className="wechat-office-account-navigation-bar-center">
         <b className="wechat-office-account-navigation-bar-title">{name}</b>
       </div>
       <div className="wechat-office-account-navigation-bar-right">
-        <Icon size={18} type="setting" className="wechat-office-account-navigation-bar-icon-setting" unit="px" />
+        <Icon
+          size={18}
+          type="setting"
+          className="wechat-office-account-navigation-bar-icon-setting"
+          unit="px"
+        />
       </div>
     </div>
   );

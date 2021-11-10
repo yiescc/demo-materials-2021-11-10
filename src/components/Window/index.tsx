@@ -1,4 +1,10 @@
-import { createElement, PropsWithChildren, useMemo, CSSProperties, ReactNode } from 'react';
+import React, {
+  createElement,
+  PropsWithChildren,
+  useMemo,
+  CSSProperties,
+  ReactNode,
+} from 'react';
 
 // Comps
 import StatusBar from './StatusBar';

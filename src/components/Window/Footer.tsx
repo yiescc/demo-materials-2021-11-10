@@ -1,4 +1,4 @@
-import { createElement, PropsWithChildren } from 'react';
+import React, { createElement, PropsWithChildren } from 'react';
 
 import style from './Footer.module.scss';
 

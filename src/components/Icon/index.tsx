@@ -1,4 +1,9 @@
-import { createElement, CSSProperties, PropsWithChildren, useMemo } from 'react';
+import React, {
+  createElement,
+  CSSProperties,
+  PropsWithChildren,
+  useMemo,
+} from 'react';
 import { IconTypes } from './type';
 
 import './index.scss';
@@ -20,7 +25,12 @@ const minFontSize = 24;
 
 export default (props: PropsWithChildren<IconProps>) => {
   const style = useMemo(() => {
-    const { unit = 'rpx', size = minFontSize, customSize = false, color } = props;
+    const {
+      unit = 'rpx',
+      size = minFontSize,
+      customSize = false,
+      color,
+    } = props;
 
     const result: CSSProperties = {};
 
@@ -39,5 +49,10 @@ export default (props: PropsWithChildren<IconProps>) => {
     return { ...result, ...props.style };
   }, [props]);
 
-  return <i className={`cool-icon cool-icon-font-${props.type} ${props.className}`} style={style} />;
+  return (
+    <i
+      className={`cool-icon cool-icon-font-${props.type} ${props.className}`}
+      style={style}
+    />
+  );
 };
