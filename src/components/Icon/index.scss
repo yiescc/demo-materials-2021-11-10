@@ -1,0 +1,12 @@
+@import '../../assets/css/com.scss';
+@import './icon.scss';
+
+.cool-icon {
+  flex-shrink: 0;
+  font-style: normal;
+  display: inline-block;
+  text-align: center;
+  color: $brand-primary;
+  font-weight: normal;
+  line-height: 1.5;
+}

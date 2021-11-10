@@ -1,7 +1,3 @@
-import * as React from 'react';
-import styles from './index.module.scss';
-export default function ExampleComponent() {
-  return /*#__PURE__*/React.createElement("div", {
-    className: styles.Container
-  }, "Hello ExampleComponent");
-}
+export { default as OfficeAccount } from './components/OfficeAccount';
+export { default as Window } from './components/Window';
+export { default as message } from './components/Message';

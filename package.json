@@ -32,7 +32,9 @@
     "component"
   ],
   "dependencies": {
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "cool-hooks": "git+https://e.coding.net/frontend-git/frontend/hooks.git",
+    "wechat-emoji-plus": "^1.0.3"
   },
   "devDependencies": {
     "build-plugin-component": "^1.0.0",
@@ -45,7 +47,10 @@
     "eslint": "^7.0.0",
     "stylelint": "^13.7.2",
     "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.2"
+    "@types/react-dom": "^17.0.2",
+    "wechat-mp-specs": "https://e.coding.net/frontend-git/wechat/wechat-mp-specs.git",
+    "cool-common-css": "git+https://e.coding.net/frontend-git/frontend/common-css.git",
+    "driver-universal": "^3.3.1"
   },
   "peerDependencies": {
     "react": "^16 || ^17"

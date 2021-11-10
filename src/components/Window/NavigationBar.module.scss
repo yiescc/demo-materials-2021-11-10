@@ -1,0 +1,29 @@
+@import '../../assets/css/_mixin.scss';
+
+.NavigatorBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: px(20px);
+}
+
+.Name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: 0 auto;
+  font-size: px(32px);
+  font-weight: bold;
+  text-align: center;
+  transform: translate3d(0, -50%, 0);
+}
+
+.BtnBackIcon {
+  color: #000;
+}
+
+// .wechat-office-account-navigation-bar-icon-setting {
+//   color: #000;
+// }

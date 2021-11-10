@@ -1,0 +1,218 @@
+@import '../../assets/css/com.scss';
+
+@function px($px) {
+  @return $px;
+}
+
+$wechatBrandPrimary: #07c160;
+
+.Menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.MenuList {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.KeyboardIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: px(43px);
+  height: px(50px);
+}
+
+.MenuAddIcon {
+  display: block;
+  margin: 0 auto;
+}
+
+.ItemSplit {
+  position: absolute;
+  left: px(-1px);
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  display: block;
+  flex-shrink: 0;
+  height: px(35px);
+  @include hairline(left, #dddedd);
+}
+
+.Item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: px(37px);
+  padding: px(7px) 0;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+  box-sizing: unset;
+  &:hover {
+    background-color: #eaeaea;
+  }
+}
+
+.ItemText {
+  font-size: px(12px);
+  color: #000;
+}
+
+.ItemContent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: px(35px);
+  margin: 0;
+}
+
+.ItemIconMore {
+  flex-shrink: 0;
+  display: block;
+  margin: 0 px(4px) 0 0;
+  width: px(5px);
+  height: px(5px);
+  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik05IDh2MUgwVjhoOXptMC00djFIMFY0aDl6bTAtNHYxSDBWMGg5eiIgZmlsbD0iIzc2NzY3NiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+')
+    no-repeat center;
+  background-size: cover;
+}
+
+.ItemCurrent {
+  .ItemText {
+    color: $wechatBrandPrimary;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: px(2px) solid $wechatBrandPrimary;
+    border-radius: px(2px);
+    pointer-events: none;
+  }
+}
+
+.ItemCurrentFold {
+  .ItemText {
+    color: #000;
+  }
+  &::before {
+    display: none;
+  }
+  &:hover {
+    background: transparent;
+    .ItemText {
+      &:hover {
+        color: $wechatBrandPrimary;
+      }
+    }
+  }
+}
+
+.SecondaryMenu {
+  position: absolute;
+  left: 50%;
+  bottom: px(65px);
+  width: max-content;
+  // max-width: ;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  background: #f7f7f7 no-repeat center;
+  background-size: cover;
+  border-radius: px(5px);
+  transform: translate3d(-50%, 0, 0);
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    bottom: px(-5px);
+    margin: 0 auto;
+    width: px(10px);
+    height: px(10px);
+    transform: rotate(45deg);
+    background: #f7f7f7 no-repeat center;
+    background-size: cover;
+  }
+}
+
+.SecondaryItemSplit {
+  position: absolute;
+  z-index: 0;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  width: calc(100% - px(24px));
+  margin: 0 auto;
+  display: block;
+  @include hairline(bottom, #e1e1e1);
+}
+
+.SecondaryItem {
+  position: relative;
+  padding: px(2px);
+  text-align: center;
+
+  min-width: px(80px);
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:nth-last-of-type(1) {
+    .SecondaryItemSplit {
+      display: none;
+    }
+  }
+}
+
+.SecondaryItemText {
+  display: block;
+  padding: 0 px(8px);
+  font-size: px(14px);
+  height: px(35px);
+  color: #000;
+  text-align: center;
+  line-height: px(35px);
+  border-radius: px(2px);
+  box-sizing: border-box;
+  &:hover {
+    background-color: #eaeaea;
+  }
+}
+
+.SecondaryItemCurrent {
+  .SecondaryItemText {
+    color: $wechatBrandPrimary;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: px(2px) solid $wechatBrandPrimary;
+    border-radius: px(2px);
+    pointer-events: none;
+  }
+}

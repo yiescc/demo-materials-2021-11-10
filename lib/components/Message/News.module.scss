@@ -1,0 +1,42 @@
+.Title {
+  width: 205px;
+  display: block;
+  margin: 0 0 2px 0;
+  font-weight: normal;
+  font-size: 15px;
+  color: #1b1b1b;
+  line-height: 19px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.Info {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Desc {
+  width: 148px;
+  min-height: 54px;
+  font-size: 13px;
+  color: #8a8a8a;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.Pic {
+  display: block;
+  width: 47px;
+  height: 47px;
+  background: no-repeat center;
+  background-size: cover;
+}

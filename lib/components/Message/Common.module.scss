@@ -1,0 +1,120 @@
+@import '../../assets/css/_mixin.scss';
+
+@function px($px) {
+  @return $px;
+}
+
+.Wrapper {
+  display: flex;
+  margin: px(19px) 0;
+}
+
+.avatar {
+  display: block;
+  width: px(38px);
+  height: px(38px);
+  border-radius: px(4px);
+  background: #fff no-repeat center;
+  background-size: cover;
+}
+
+.right {
+  a {
+    color: #5b6d8b;
+    text-decoration: none;
+  }
+}
+
+.Content {
+  position: relative;
+  border-radius: px(4px);
+  background: #fff;
+  max-width: px(520px);
+  min-height: px(38px);
+  padding: px(10px) px(12px);
+  box-sizing: border-box;
+  word-break: break-all;
+  white-space: pre-wrap;
+
+  font-size: px(16px);
+  line-height: px(19px);
+  color: #1b1b1b;
+}
+.ContentPic {
+  position: relative;
+  border-radius: px(4px);
+  background: #fff;
+  max-width: px(520px);
+  min-height: px(38px);
+  box-sizing: border-box;
+  word-break: break-all;
+  white-space: pre-wrap;
+  padding: 0;
+  font-size: px(16px);
+  line-height: px(19px);
+  color: #1b1b1b;
+}
+.ContentLeft {
+  &::before {
+    position: absolute;
+    content: '';
+    left: px(-4px);
+    top: px(15px);
+    width: px(9px);
+    height: px(9px);
+    border-radius: px(2px);
+    transform: rotate(45deg);
+    background-color: #fff;
+  }
+}
+.ContentRight {
+  &::before {
+    position: absolute;
+    content: '';
+    right: px(-4px);
+    top: px(15px);
+    width: px(9px);
+    height: px(9px);
+    border-radius: px(2px);
+    transform: rotate(45deg);
+    background-color: #fff;
+  }
+}
+.ContentRightText {
+  background: #98e65f;
+  &::before {
+    position: absolute;
+    content: '';
+    right: px(-4px);
+    top: px(15px);
+    width: px(9px);
+    height: px(9px);
+    border-radius: px(2px);
+    transform: rotate(45deg);
+    background-color: #98e65f;
+  }
+}
+
+.Mine {
+  padding: 0 px(16px) 0 0;
+  flex-direction: row-reverse;
+  .right {
+    margin: 0 px(12px) 0 0;
+  }
+}
+
+.Other {
+  padding: 0 0 0 px(16px);
+  flex-direction: row;
+  .right {
+    margin: 0 0 0 px(12px);
+  }
+}
+
+.Center {
+  padding: 0;
+  justify-content: center;
+  .right {
+    margin: 0;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../assets/css/com.scss';
+
+.wechat-office-account-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  @include hairline(top, #dbdbdb);
+  background: #f7f7f7 no-repeat center;
+  background-size: cover;
+  height: 50px;
+}

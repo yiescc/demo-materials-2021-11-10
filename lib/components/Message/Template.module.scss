@@ -1,0 +1,102 @@
+@import '../../assets/css/com.scss';
+
+.TemplateContainer {
+  margin: 12px;
+  width: 350px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.TemplateContent {
+  padding: 0 1px;
+  background: #fff;
+  cursor: pointer;
+  &:active {
+    background-color: #e5e5e5;
+  }
+}
+
+.TemplateHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8px 8px 16px;
+  .Left {
+    display: flex;
+    align-items: center;
+  }
+  .Right {
+    transform: rotateZ(90deg);
+  }
+}
+
+.TemplateMain {
+  padding: 0 16px;
+  padding-bottom: 18px;
+}
+
+.Title {
+  font-size: 16px;
+  font-weight: normal;
+  color: inherit;
+  line-height: 1.5;
+}
+
+.IconMore {
+  font-size: 16px;
+  color: #999;
+  font-weight: bold;
+  line-height: 1.5;
+  transform: translate3d(0, -50%, 0);
+}
+
+.ContentItemFirst {
+  margin-top: -4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #999;
+  font-weight: normal;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.ContentItem {
+  display: flex;
+  .Key {
+    flex-shrink: 0;
+    margin-right: 12px;
+    font-size: 14px;
+    color: #999;
+    font-weight: normal;
+    line-height: 2;
+    white-space: nowrap;
+  }
+  .Value {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 2;
+    white-space: pre-wrap;
+  }
+}
+
+.Footer {
+  padding: 0 16px;
+}
+
+.FooterContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  height: 44px;
+  border-top: 1px solid #e4e5e6;
+  .Text {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+  .Icon {
+    color: #999;
+    transform: rotate(180deg);
+  }
+}

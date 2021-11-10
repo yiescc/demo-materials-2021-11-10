@@ -1,0 +1,117 @@
+@import '../../assets/css/com.scss';
+
+.OfficialSubscribe,
+.ServiceSubscribe {
+  margin: 12px;
+  width: 350px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.OfficialSubscribeContainer,
+.ServiceSubscribeContainer {
+  padding: 0 1px;
+  background: #fff;
+  cursor: pointer;
+  &:active {
+    background-color: #e5e5e5;
+  }
+}
+
+.OfficialSubscribeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px 0 16px;
+  height: 48px;
+  border-bottom: 1px solid #eaeaea;
+  .Left {
+    display: flex;
+    align-items: center;
+  }
+  .Right {
+    transform: rotateZ(90deg);
+  }
+}
+
+.OfficialAvatar {
+  margin-right: 4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.OfficialNickname {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.OfficialSubscribeMain {
+  padding: 0 16px;
+  padding-bottom: 18px;
+}
+
+.ServiceSubscribeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px 24px;
+}
+
+.ServiceSubscribeMain {
+  padding: 0 16px;
+  padding-bottom: 18px;
+}
+
+.Title {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.IconMore {
+  font-size: 16px;
+  color: #999;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.ContentItem {
+  display: flex;
+  .Key {
+    margin-right: 12px;
+    font-size: 14px;
+    color: #999;
+    font-weight: normal;
+    line-height: 2;
+    white-space: nowrap;
+  }
+  .Value {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 2;
+  }
+}
+
+.Footer {
+  padding: 0 16px;
+}
+
+.FooterContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  height: 44px;
+  border-top: 1px solid #e4e5e6;
+  .Text {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+  .Icon {
+    color: #999;
+    transform: rotate(180deg);
+  }
+}
